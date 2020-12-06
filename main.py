@@ -11,10 +11,6 @@ def jumlah_batas(nums, batas):
     if i > batas:
       # Maka variabel hasil akan melakukan penambahan 1 di setiap perulangannya
       hasil += i
-    # Jika tidak
-    else:
-      # Akan melanjutkan nilai
-      continue
   # Mengembalikan nilai hasil
   return hasil
 
@@ -23,13 +19,13 @@ def jumlah_batas(nums, batas):
 
 def list_nonvokal(s):
   # Variabel yang berisikan list huruf vokal
-  huruf_vokal = ["A", "I", "U", "E", "O"]
+  huruf_vokal = ["a", "i", "u", "e", "o", "A", "I", "U", "E", "O"]
   # Membuat variabel hasil yang menampung array kosong
   hasil = []
   # Membuat perulangan dengan jarak dari 0 hingga sebelum 1 nilai dari banyaknya nilai di dalam parameter s
   for i in range(0, len(s)):
     # Jika nilai parameter s yang sudah di konvesikan menjadi huruf besar berada di dalam variabel huruf vokal
-    if s[i].upper() in huruf_vokal:
+    if s[i] in huruf_vokal:
       # Maka akan melanjutkan ke nilai berikutnya (ngeskip)
       continue
     # Jika tidak
